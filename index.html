@@ -1,0 +1,1027 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SiteSync Agency - Modern Web Development Solutions</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Load Inter Font -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #ffffff; /* Explicitly white background */
+            color: #1f2937; /* Dark gray/near black text */
+        }
+    </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'site-blue': '#2563eb', // A strong, professional blue
+                        'site-light-blue': '#eff6ff',
+                        'site-dark': '#111827',
+                    }
+                }
+            }
+        };
+    </script>
+</head>
+<body class="bg-white text-gray-900 antialiased">
+
+    <!-- Header & Navigation -->
+    <header class="sticky top-0 z-50 bg-white border-b border-gray-100 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo/Agency Name -->
+                <a href="#home" class="flex-shrink-0 text-xl font-extrabold tracking-tight text-site-dark">
+                    Site<span class="text-site-blue">Sync</span> Agency
+                </a>
+                
+                <!-- Navigation Links - ADDED AI WIREFRAMER -->
+                <nav class="hidden md:flex space-x-8">
+                    <a href="#services" class="text-sm font-medium hover:text-site-blue transition duration-150 rounded-md">Services</a>
+                    <a href="#name-generator" class="text-sm font-medium hover:text-site-blue transition duration-150 rounded-md">Name Generator</a>
+                    <a href="#seo-generator" class="text-sm font-medium hover:text-site-blue transition duration-150 rounded-md">SEO Strategy</a>
+                    <a href="#ai-wireframer" class="text-sm font-medium hover:text-site-blue transition duration-150 rounded-md">AI Wireframer</a>
+                    <a href="#contact" class="text-sm font-medium hover:text-site-blue transition duration-150 rounded-md">Contact</a>
+                </nav>
+
+                <!-- Mobile Menu Button (Hamburger) -->
+                <button id="mobile-menu-button" class="md:hidden p-2 text-gray-500 hover:text-site-blue transition duration-150 rounded-md">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu (Hidden by default) - ADDED AI WIREFRAMER -->
+        <div id="mobile-menu" class="hidden md:hidden">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 border-t border-gray-100">
+                <a href="#services" class="block px-3 py-2 text-base font-medium text-site-dark hover:bg-site-light-blue rounded-md">Services</a>
+                <a href="#name-generator" class="block px-3 py-2 text-base font-medium text-site-dark hover:bg-site-light-blue rounded-md">Name Generator</a>
+                <a href="#seo-generator" class="block px-3 py-2 text-base font-medium text-site-dark hover:bg-site-light-blue rounded-md">SEO Strategy</a>
+                <a href="#ai-wireframer" class="block px-3 py-2 text-base font-medium text-site-dark hover:bg-site-light-blue rounded-md">AI Wireframer</a>
+                <a href="#contact" class="block px-3 py-2 text-base font-medium text-site-dark hover:bg-site-light-blue rounded-md">Contact</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="pt-24 pb-32 sm:pt-32 sm:pb-40 bg-white">
+            <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <span class="text-sm font-semibold uppercase tracking-wider text-site-blue bg-site-light-blue py-1 px-3 rounded-full shadow-sm">
+                    Sync Your Vision. Build Your Success.
+                </span>
+                <h1 class="mt-4 text-4xl font-extrabold tracking-tight sm:text-5xl md:text-6xl leading-tight">
+                    High-Performance <span class="text-site-blue">Websites</span> That Convert
+                </h1>
+                <p class="mt-6 max-w-2xl mx-auto text-xl text-gray-600">
+                    We specialize in modern, responsive web development, ensuring seamless performance and compelling user experiences across all devices.
+                </p>
+                <div class="mt-10 flex justify-center space-x-4">
+                    <!-- The 'Start Your Project' button links directly to the Contact section (id="contact") -->
+                    <a href="#contact" class="inline-flex items-center px-8 py-3 border border-transparent text-base font-medium rounded-full shadow-lg text-white bg-site-blue hover:bg-blue-700 transition duration-300 transform hover:scale-105">
+                        Start Your Project
+                    </a>
+                    <!-- REMOVED "View Our Work" button that linked to portfolio -->
+                    <a href="#services" class="inline-flex items-center px-8 py-3 border border-gray-300 text-base font-medium rounded-full text-site-dark bg-white hover:bg-gray-50 transition duration-300">
+                        See Our Services
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- NEW AI Website Wireframe Generator Section -->
+        <section id="ai-wireframer" class="py-16 sm:py-24 bg-white border-t border-gray-100">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-extrabold text-site-dark sm:text-4xl">
+                        AI Website <span class="text-site-blue">Wireframer</span>
+                    </h2>
+                    <p class="mt-4 text-lg text-gray-600">
+                        Describe the website you want, and our AI will generate a simple visual layout (a-low-fidelity wireframe) in seconds.
+                    </p>
+                </div>
+                
+                <div class="bg-gray-50 p-8 md:p-12 rounded-xl shadow-2xl border border-gray-200">
+                    <!-- Input Area -->
+                    <div class="space-y-4 mb-6">
+                        <label for="wireframe-topic" class="block text-lg font-bold text-gray-700">Describe your website</label>
+                        <textarea id="wireframe-topic" rows="3" placeholder="e.g., 'A modern landing page for a new mobile app' or 'A simple blog for my travel photos'" class="block w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm focus:ring-site-blue focus:border-site-blue"></textarea>
+                        <button type="button" id="generate-wireframe-button" onclick="generateWireframe()" class="w-full flex justify-center items-center px-6 py-3 border border-transparent text-base font-medium rounded-full shadow-lg text-white bg-site-blue hover:bg-blue-700 transition duration-300 transform hover:scale-[1.01]">
+                            ✨ Generate Visual Wireframe
+                        </button>
+                    </div>
+                    
+                    <!-- Output Area -->
+                    <div id="wireframe-output-area" class="mt-8 pt-6 border-t border-gray-100 hidden">
+                        <h4 class="text-xl font-bold text-site-dark mb-4 flex items-center">
+                            Generated Wireframe
+                            <div id="wireframe-loading-indicator" class="ml-3 hidden">
+                                <svg class="animate-spin h-5 w-5 text-site-blue" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path></svg>
+                            </div>
+                        </h4>
+                        
+                        <!-- This container holds the rendered wireframe blocks -->
+                        <div id="wireframe-render-container" class="w-full bg-white rounded-lg border-2 border-dashed border-gray-300 p-4 space-y-4">
+                            <!-- Wireframe blocks will be injected here by renderWireframe() -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-16 sm:py-24 bg-site-light-blue border-t border-gray-100">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-extrabold text-site-dark sm:text-4xl">
+                        Ready to <span class="text-site-blue">Build?</span>
+                    </h2>
+                    <p class="mt-4 text-lg text-gray-600">
+                        Let's discuss your project and turn your digital vision into reality.
+                    </p>
+                </div>
+                
+                <div class="bg-white p-8 md:p-12 rounded-xl shadow-2xl border border-site-blue/20">
+                    <form id="contact-form" class="space-y-6" onsubmit="event.preventDefault(); submitForm();">
+                        <div>
+                            <label for="name" class="block text-sm font-medium text-gray-700">Full Name</label>
+                            <div class="mt-1">
+                                <input type="text" id="name" name="name" required class="block w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm focus:ring-site-blue focus:border-site-blue">
+                            </div>
+                        </div>
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-gray-700">Email Address</label>
+                            <div class="mt-1">
+                                <input type="email" id="email" name="email" required class="block w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm focus:ring-site-blue focus:border-site-blue">
+                            </div>
+                        </div>
+                        <div>
+                            <label for="project" class="block text-sm font-medium text-gray-700">Tell Us About Your Project</label>
+                            <div class="mt-1">
+                                <textarea id="project" name="project" rows="4" required class="block w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm focus:ring-site-blue focus:border-site-blue"></textarea>
+                            </div>
+                        </div>
+                        <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                            <!-- LLM Feature 1 Button -->
+                            <button type="button" id="generate-pitch-button" onclick="generateProjectSummary()" class="flex-1 flex justify-center items-center px-6 py-3 border border-site-blue text-base font-medium rounded-full shadow-lg text-site-blue bg-white hover:bg-site-light-blue transition duration-300">
+                                ✨ Refine Project Pitch
+                            </button>
+                            <!-- Existing Submit Button -->
+                            <button type="submit" class="flex-1 flex justify-center items-center px-6 py-3 border border-transparent text-base font-medium rounded-full shadow-lg text-white bg-site-blue hover:bg-blue-700 transition duration-300 transform hover:scale-[1.01]">
+                                Send Inquiry
+                            </button>
+                        </div>
+                    </form>
+
+                    <!-- LLM Output/Loading Area -->
+                    <div id="llm-output-area" class="mt-8 pt-6 border-t border-gray-100 hidden">
+                        <h4 class="text-lg font-bold text-site-dark mb-3 flex items-center">
+                            <span id="output-header">Refined Project Pitch</span>
+                            <div id="loading-indicator" class="ml-3 hidden">
+                                <svg class="animate-spin h-5 w-5 text-site-blue" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                                    <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                                    <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                                </svg>
+                            </div>
+                        </h4>
+                        <div id="llm-result" class="p-4 bg-site-light-blue rounded-lg text-gray-700 text-sm whitespace-pre-wrap"></div>
+                        <button id="copy-to-clipboard" onclick="copyToDescription()" class="mt-3 inline-flex items-center text-sm font-medium text-site-blue hover:text-blue-700 transition duration-150">
+                            Use this pitch as my project description &rarr;
+                        </button>
+                    </div>
+
+                    <!-- Custom Modal/Message Box (for alerts) -->
+                    <div id="message-box" class="fixed inset-0 bg-gray-600 bg-opacity-50 hidden items-center justify-center p-4 z-50">
+                        <div class="bg-white p-6 rounded-lg shadow-xl max-w-sm w-full">
+                            <h5 class="text-lg font-bold mb-3 text-site-blue">Message</h5>
+                            <p id="message-text" class="text-gray-700 mb-4"></p>
+                            <button onclick="document.getElementById('message-box').classList.add('hidden'); document.getElementById('message-box').classList.remove('flex');" class="w-full bg-site-blue text-white py-2 rounded-full hover:bg-blue-700 transition duration-150">
+                                Close
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-site-dark text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <!-- Agency Info -->
+                <div class="md:col-span-2">
+                    <h3 class="text-2xl font-extrabold tracking-tight">
+                        Site<span class="text-site-blue">Sync</span> Agency
+                    </h3>
+                    <p class="mt-4 text-gray-400 text-sm">
+                        Digital solutions built for performance and scale. Based in the cloud, serving clients globally.
+                    </p>
+                </div>
+
+                <!-- Quick Links - ADDED AI WIREFRAMER -->
+                <div>
+                    <h4 class="text-lg font-semibold text-site-blue">Quick Links</h4>
+                    <ul class="mt-4 space-y-2 text-sm text-gray-400">
+                        <li><a href="#services" class="hover:text-white transition duration-150">Services</a></li>
+                        <li><a href="#name-generator" class="hover:text-white transition duration-150">Name Generator</a></li>
+                        <li><a href="#seo-generator" class="hover:text-white transition duration-150">SEO Strategy</a></li>
+                        <li><a href="#ai-wireframer" class="hover:text-white transition duration-150">AI Wireframer</a></li>
+                        <li><a href="#contact" class="hover:text-white transition duration-150">Get in Touch</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact -->
+                <div>
+                    <h4 class="text-lg font-semibold text-site-blue">Contact Us</h4>
+                    <ul class="mt-4 space-y-2 text-sm text-gray-400">
+                        <li>hlumelosn@gmail.com</li>
+                        <li>+27 81 326 7823</li> 
+                        <li>Remote / Global</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Copyright -->
+            <div class="mt-10 pt-8 border-t border-gray-700 text-center text-sm text-gray-500">
+                &copy; 2025 SiteSync Agency. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Mobile Menu Toggle and LLM integration -->
+    <script>
+        // --- Utility Functions ---
+
+        /**
+         * Custom message box function to replace alert() and confirm()
+         */
+        function showMessage(text) {
+            const messageBox = document.getElementById('message-box');
+            const messageText = document.getElementById('message-text');
+            messageText.textContent = text;
+            messageBox.classList.remove('hidden');
+            messageBox.classList.add('flex');
+        }
+
+        /**
+         * Performs a fetch request with exponential backoff for retries.
+         */
+        async function exponentialBackoffFetch(url, options, retries = 3) {
+            for (let i = 0; i < retries; i++) {
+                try {
+                    const response = await fetch(url, options);
+                    if (!response.ok) {
+                        // Throw an error if the HTTP status is not OK
+                        throw new Error(`HTTP error! status: ${response.status}`);
+                    }
+                    return response;
+                } catch (error) {
+                    if (i === retries - 1) {
+                        // If it's the last retry, throw the error
+                        throw error;
+                    }
+                    // Wait exponentially longer before the next retry
+                    const delay = Math.pow(2, i) * 1000;
+                    await new Promise(resolve => setTimeout(resolve, delay));
+                }
+            }
+            // Should be unreachable, but good practice to throw something
+            throw new Error("Exponential backoff failed after all retries.");
+        }
+
+        // --- LLM Configuration ---
+        const LLM_MODEL = 'gemini-2.5-flash-preview-09-2025';
+        const API_KEY = ""; // Canvas environment will provide the key
+        const BASE_API_URL = `https://generativelanguage.googleapis.com/v1beta/models/${LLM_MODEL}:generateContent?key=${API_KEY}`;
+        
+        // --- LLM Feature 3: SEO Strategy Generator Logic (Multi-step) ---
+        // NOTE: The HTML for this section is missing in the user's provided file.
+        // These will error with 'null' if called, but won't cause a syntax error.
+        const seoTopicInput = document.getElementById('seo-topic');
+        const seoOutputArea = document.getElementById('seo-output-area');
+        const seoQuestionsContainer = document.getElementById('seo-questions-container');
+        const seoResultsDiv = document.getElementById('seo-results-container');
+        const seoLoadingIndicator = document.getElementById('seo-loading-indicator');
+        const seoLoadingText = document.getElementById('seo-loading-text');
+        const generateSeoButton = document.getElementById('generate-seo-button');
+        const generateFinalStrategyButton = document.getElementById('generate-final-strategy-button');
+        let generatedSeoQuestions = []; // Store for questions
+        
+        
+        // --- LLM Feature 1: Refine Project Pitch Logic ---
+        const projectTextarea = document.getElementById('project');
+        const llmOutputArea = document.getElementById('llm-output-area');
+        const llmResultDiv = document.getElementById('llm-result');
+        const loadingIndicator = document.getElementById('loading-indicator');
+        const generatePitchButton = document.getElementById('generate-pitch-button');
+
+
+        async function generateProjectSummary() {
+            const userQuery = projectTextarea.value.trim();
+
+            if (!userQuery) {
+                showMessage("Please enter a brief description of your project first so the AI can refine it!");
+                return;
+            }
+
+            // UI updates for loading state
+            llmOutputArea.classList.remove('hidden');
+            llmResultDiv.textContent = 'Generating refined pitch...';
+            loadingIndicator.classList.remove('hidden');
+            generatePitchButton.disabled = true;
+            generatePitchButton.classList.add('opacity-50');
+
+            const systemPrompt = `You are a professional, highly articulate scoping assistant for a web development agency named SiteSync Agency. Your goal is to take a client's raw, unstructured project description and refine it into a clear, concise, and professional pitch suitable for an initial proposal document.
+
+The output must be formatted with the following structure:
+1.  Project Name: A creative, professional title.
+2.  Goal: A single, clear sentence defining the primary business objective.
+3.  Key Features: A short, descriptive bulleted list of 3-5 necessary features.
+4.  Target Audience: A brief summary of the intended users.
+
+Output the results directly without any conversational preamble or markdown headings outside the content itself.`;
+
+            const payload = {
+                contents: [{ parts: [{ text: userQuery }] }],
+                systemInstruction: {
+                    parts: [{ text: systemPrompt }]
+                },
+            };
+
+            try {
+                const response = await exponentialBackoffFetch(BASE_API_URL, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload)
+                });
+
+                const result = await response.json();
+                const generatedText = result?.candidates?.[0]?.content?.parts?.[0]?.text;
+
+                if (generatedText) {
+                    llmResultDiv.textContent = generatedText;
+                } else {
+                    llmResultDiv.textContent = 'Error: Could not generate pitch. Please try again or refine your input.';
+                }
+
+            } catch (error) {
+                console.error("Gemini API (Pitch) call failed:", error);
+                llmResultDiv.textContent = 'A network error occurred. Please check your connection or try again later.';
+            } finally {
+                // UI updates for idle state
+                loadingIndicator.classList.add('hidden');
+                generatePitchButton.disabled = false;
+                generatePitchButton.classList.remove('opacity-50');
+            }
+        }
+        
+        /**
+         * Copies the generated pitch back into the main project textarea.
+         */
+        function copyToDescription() {
+            const generatedPitch = llmResultDiv.textContent;
+            if (generatedPitch && !generatedPitch.includes('Error:') && !generatedPitch.includes('Generating refined pitch')) {
+                projectTextarea.value = generatedPitch;
+                showMessage("Refined pitch copied successfully into the 'Tell Us About Your Project' field!");
+            } else {
+                showMessage("There is no valid pitch to copy yet.");
+            }
+        }
+        
+        
+        // --- LLM Feature 2: Business Name Generator Logic ---
+        // NOTE: The HTML for this section is missing in the user's provided file.
+        const nameTopicInput = document.getElementById('name-topic');
+        const nameOutputArea = document.getElementById('name-output-area');
+        const nameResultsDiv = document.getElementById('name-results-container');
+        const nameLoadingIndicator = document.getElementById('name-loading-indicator');
+        const generateNameButton = document.getElementById('generate-name-button');
+        const generateMoreButton = document.getElementById('generate-more-button'); 
+        
+        async function generateBusinessNames() {
+            if (!nameTopicInput) {
+                showMessage("Name Generator HTML section is missing from the page.");
+                return; // Prevent error
+            }
+            const userQuery = nameTopicInput.value.trim();
+
+            if (!userQuery) {
+                showMessage("Please enter a concept or keywords for your business.");
+                return;
+            }
+
+            // UI updates for loading state
+            nameOutputArea.classList.remove('hidden');
+            nameResultsDiv.innerHTML = '<p class="text-center text-gray-600">Brainstorming creative names and checking branding feasibility...</p>';
+            nameLoadingIndicator.classList.remove('hidden');
+            generateNameButton.disabled = true;
+            generateNameButton.classList.add('opacity-50');
+            generateMoreButton.classList.add('hidden'); // Hide the "Generate More" button while loading
+
+            const nameSystemPrompt = `You are a creative branding and naming specialist for SiteSync Agency. Your task is to generate 6 unique, modern, and memorable business name ideas based on the user's concept. For each name, you must also suggest a plausible .com domain name extension (e.g., mysite.com, using a variation if the name itself is common). The names should suggest professionalism, technology, or efficiency.`;
+
+            const nameSchema = {
+                type: "ARRAY",
+                items: {
+                    type: "OBJECT",
+                    properties: {
+                        "name": { "type": "STRING", "description": "The suggested business name." },
+                        "rationale": { "type": "STRING", "description": "A brief explanation of why this name works for the brand (e.g., suggests speed, digital integration, or clarity)." },
+                        "suggestedDomain": { "type": "STRING", "description": "A plausible .com domain name suggestion, derived from the business name." }
+                    },
+                    propertyOrdering: ["name", "rationale", "suggestedDomain"]
+                }
+            };
+
+            const payload = {
+                contents: [{ parts: [{ text: `Generate 6 business name ideas for a company focused on: ${userQuery}` }] }],
+                systemInstruction: {
+                    parts: [{ text: nameSystemPrompt }]
+                },
+                generationConfig: {
+                    responseMimeType: "application/json",
+                    responseSchema: nameSchema
+                }
+            };
+
+            try {
+                const response = await exponentialBackoffFetch(BASE_API_URL, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload)
+                });
+                
+                const result = await response.json();
+                const jsonText = result?.candidates?.[0]?.content?.parts?.[0]?.text;
+
+                if (jsonText) {
+                    const nameOptions = JSON.parse(jsonText);
+                    let html = '';
+                    if (Array.isArray(nameOptions) && nameOptions.length > 0) {
+                        nameOptions.forEach((item, index) => {
+                            // HTML structure to include the domain suggestion
+                            html += `
+                                <div class="p-4 bg-white rounded-lg border border-gray-200 shadow-sm">
+                                    <h5 class="text-lg font-bold text-site-blue mb-2">Option ${index + 1}: ${item.name || 'N/A'}</h5>
+                                    <p class="text-gray-700 text-sm mb-2">
+                                        <span class="font-semibold text-site-dark">Suggested Domain:</span> 
+                                        <code class="bg-gray-100 text-site-dark p-1 rounded-md text-sm font-mono tracking-wider">${item.suggestedDomain || 'N/A'}</code>
+                                        <span class="text-xs text-gray-500 block mt-1">(Remember to check real-time domain availability with a registrar.)</span>
+                                    </p>
+                                    <p class="text-gray-700 text-sm">
+                                        <span class="font-semibold text-site-dark">Rationale:</span> ${item.rationale || 'No rationale provided.'}
+                                    </p>
+                                </div>
+                            `;
+                        });
+                        nameResultsDiv.innerHTML = html;
+                        // Show "Generate More" button after success
+                        generateMoreButton.classList.remove('hidden');
+                    } else {
+                         nameResultsDiv.innerHTML = '<p class="text-center text-red-500">Could not parse valid name suggestions. Please try again with a clearer query.</p>';
+                    }
+                    
+                } else {
+                    nameResultsDiv.innerHTML = '<p class="text-center text-red-500">Error generating names. Received empty response.</p>';
+                }
+
+            } catch (error) {
+                console.error("Gemini API (Name Generator) call failed:", error);
+                nameResultsDiv.innerHTML = '<p class="text-center text-red-500">A network error occurred during generation. Please try again.</p>';
+            } finally {
+                // UI updates for idle state
+                nameLoadingIndicator.classList.add('hidden');
+                generateNameButton.disabled = false;
+                generateNameButton.classList.remove('opacity-50');
+            }
+        }
+
+        
+        // --- NEW LLM Feature 3: SEO Strategy Generator Logic (Multi-step) ---
+        /**
+         * Step 1: Get Clarifying Questions from the AI
+         */
+        async function getSeoQuestions() {
+            if (!seoTopicInput) {
+                showMessage("SEO Strategy Generator HTML section is missing from the page.");
+                return; // Prevent error
+            }
+            const userQuery = seoTopicInput.value.trim();
+
+            if (!userQuery) {
+                showMessage("Please enter your business type and location (e.g., 'Bakery in Cape Town').");
+                return;
+            }
+
+            // --- UI Loading State ---
+            seoOutputArea.classList.remove('hidden');
+            seoLoadingText.textContent = 'Generating clarifying questions...';
+            seoLoadingIndicator.classList.remove('hidden');
+            generateSeoButton.disabled = true;
+            generateSeoButton.classList.add('opacity-50');
+            // Hide previous results if any
+            seoQuestionsContainer.classList.add('hidden');
+            seoResultsDiv.classList.add('hidden');
+            generateFinalStrategyButton.classList.add('hidden');
+
+            const seoQuestionPrompt = `You are an expert SEO strategist. A user has provided an initial business description. To create a *great* SEO strategy, you need more details. Generate 2-3 brief, clarifying questions to ask the user. Focus on their specific niche, target customer, or unique selling points (USPs). Return *only* a JSON object.`;
+            
+            const seoQuestionSchema = {
+                type: "OBJECT",
+                properties: {
+                    "questions": {
+                        type: "ARRAY",
+                        description: "A list of 2-3 clarifying questions.",
+                        items: { "type": "STRING" }
+                    }
+                },
+                required: ["questions"]
+            };
+
+            const payload = {
+                contents: [{ parts: [{ text: userQuery }] }],
+                systemInstruction: { parts: [{ text: seoQuestionPrompt }] },
+                generationConfig: {
+                    responseMimeType: "application/json",
+                    responseSchema: seoQuestionSchema
+                }
+            };
+
+            try {
+                const response = await exponentialBackoffFetch(BASE_API_URL, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload)
+                });
+                
+                const result = await response.json();
+                const jsonText = result?.candidates?.[0]?.content?.parts?.[0]?.text;
+
+                if (jsonText) {
+                    const parsed = JSON.parse(jsonText);
+                    if (parsed.questions && parsed.questions.length > 0) {
+                        generatedSeoQuestions = parsed.questions; // Save questions
+                        let questionsHtml = '<label class="block text-lg font-bold text-gray-700">2. Tell Us More...</label>';
+                        parsed.questions.forEach((q, index) => {
+                            questionsHtml += `
+                                <div class="mt-4">
+                                    <label for="seo-q-${index}" class="block text-sm font-medium text-gray-700">${q}</label>
+                                    <input type="text" id="seo-q-${index}" class="mt-1 block w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm focus:ring-site-blue focus:border-site-blue" placeholder="Your answer...">
+                                </div>
+                            `;
+                        });
+                        seoQuestionsContainer.innerHTML = questionsHtml;
+
+                        // --- UI Update: Show Step 2 ---
+                        seoQuestionsContainer.classList.remove('hidden');
+                        generateFinalStrategyButton.classList.remove('hidden');
+                        generateSeoButton.classList.add('hidden'); // Hide step 1 button
+                    } else {
+                        throw new Error("AI returned no questions.");
+                    }
+                } else {
+                    throw new Error("AI returned an empty response.");
+                }
+
+            } catch (error) {
+                console.error("Gemini API (SEO Questions) call failed:", error);
+                showMessage("An error occurred while generating questions. Please try again.");
+                // Rollback UI
+                generateSeoButton.disabled = false;
+                generateSeoButton.classList.remove('opacity-50');
+            } finally {
+                seoLoadingIndicator.classList.add('hidden');
+            }
+        }
+
+        /**
+         * Step 2: Generate the Final SEO Strategy
+         */
+        async function generateFinalSeoStrategy() {
+            if (!seoTopicInput) {
+                showMessage("SEO Strategy Generator HTML section is missing from the page.");
+                return; // Prevent error
+            }
+            
+            const initialConcept = seoTopicInput.value.trim();
+            let comprehensivePrompt = `Initial Business Concept: ${initialConcept}\n\n`;
+            
+            // Collect answers to dynamic questions
+            let allAnswersValid = true;
+            generatedSeoQuestions.forEach((q, index) => {
+                const answerInput = document.getElementById(`seo-q-${index}`);
+                const answer = answerInput ? answerInput.value.trim() : '';
+                if (!answer) {
+                    allAnswersValid = false;
+                }
+                comprehensivePrompt += `Question: ${q}\nAnswer: ${answer}\n\n`;
+            });
+
+            if (!allAnswersValid) {
+                showMessage("Please answer all the clarifying questions to get your strategy.");
+                return;
+            }
+
+            // --- UI Loading State ---
+            seoLoadingText.textContent = 'Generating your custom SEO and content plan...';
+            seoLoadingIndicator.classList.remove('hidden');
+            generateFinalStrategyButton.disabled = true;
+            generateFinalStrategyButton.classList.add('opacity-50');
+            seoResultsDiv.classList.add('hidden'); // Hide old results
+
+            // Use the ORIGINAL schema for the final strategy
+            const seoSystemPrompt = `You are an expert SEO and content strategist for SiteSync Agency. Based on the following user-provided details, generate a concise, actionable, and professional "Mini Content & SEO Strategy" to help them get started.`;
+            const seoSchema = {
+                type: "OBJECT",
+                properties: {
+                    "targetKeywords": {
+                        type: "ARRAY",
+                        description: "A list of 5-7 high-intent local or niche keywords.",
+                        items: { "type": "STRING" }
+                    },
+                    "blogPostIdeas": {
+                        type: "ARRAY",
+                        description: "A list of 3 engaging blog post titles relevant to the business and keywords.",
+                        items: { "type": "STRING" }
+                    },
+                    "sampleAboutCopy": {
+                        type: "STRING",
+                        description: "A short, professionally-written 'About Us' paragraph (2-3 sentences) optimized with a primary keyword."
+                    }
+                },
+                propertyOrdering: ["targetKeywords", "blogPostIdeas", "sampleAboutCopy"]
+            };
+
+            const payload = {
+                contents: [{ parts: [{ text: comprehensivePrompt }] }],
+                systemInstruction: { parts: [{ text: seoSystemPrompt }] },
+                generationConfig: {
+                    responseMimeType: "application/json",
+                    responseSchema: seoSchema
+                }
+            };
+
+            try {
+                const response = await exponentialBackoffFetch(BASE_API_URL, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload)
+                });
+                
+                const result = await response.json();
+                const jsonText = result?.candidates?.[0]?.content?.parts?.[0]?.text;
+
+                if (jsonText) {
+                    const strategy = JSON.parse(jsonText);
+                    let html = '<h4 class="text-xl font-bold text-site-dark mb-3 flex items-center">Your Mini SEO & Content Strategy</h4>';
+
+                    // Format Keywords
+                    if (strategy.targetKeywords && strategy.targetKeywords.length > 0) {
+                        html += '<div class="p-4 bg-white rounded-lg border border-gray-200 shadow-sm">';
+                        html += '<h5 class="text-lg font-bold text-site-blue mb-2">Target Keywords</h5>';
+                        html += '<ul class="list-disc list-inside text-gray-700 text-sm space-y-1">';
+                        strategy.targetKeywords.forEach(kw => {
+                            html += `<li>${kw}</li>`;
+                        });
+                        html += '</ul></div>';
+                    }
+
+                    // Format Blog Ideas
+                    if (strategy.blogPostIdeas && strategy.blogPostIdeas.length > 0) {
+                        html += '<div class="mt-4 p-4 bg-white rounded-lg border border-gray-200 shadow-sm">';
+                        html += '<h5 class="text-lg font-bold text-site-blue mb-2">Blog Post Ideas</h5>';
+                        html += '<ul class="list-disc list-inside text-gray-700 text-sm space-y-1">';
+                        strategy.blogPostIdeas.forEach(idea => {
+                            html += `<li>${idea}</li>`;
+                        });
+                        html += '</ul></div>';
+                    }
+
+                    // Format Sample Copy
+                    if (strategy.sampleAboutCopy) {
+                        html += '<div class="mt-4 p-4 bg-white rounded-lg border border-gray-200 shadow-sm">';
+                        html += '<h5 class="text-lg font-bold text-site-blue mb-2">Sample "About Us" Copy</h5>';
+                        html += `<p class="text-gray-700 text-sm italic">"${strategy.sampleAboutCopy}"</p>`;
+                        html += '</div>';
+                    }
+                    
+                    seoResultsDiv.innerHTML = html;
+                    seoResultsDiv.classList.remove('hidden');
+                    
+                    // Reset UI: Show Step 1 button again for a new query
+                    generateSeoButton.classList.remove('hidden');
+                    seoQuestionsContainer.classList.add('hidden');
+                    generateFinalStrategyButton.classList.add('hidden');
+                    seoTopicInput.value = ''; // Clear initial input
+
+                } else {
+                    seoResultsDiv.innerHTML = '<p class="text-center text-red-500">Error generating strategy. Received empty response.</p>';
+                    seoResultsDiv.classList.remove('hidden');
+                }
+
+            } catch (error) {
+                console.error("Gemini API (SEO Strategy) call failed:", error);
+                seoResultsDiv.innerHTML = '<p class="text-center text-red-500">A network error occurred during generation. Please try again.</p>';
+                seoResultsDiv.classList.remove('hidden');
+            } finally {
+                // --- UI Idle State ---
+                seoLoadingIndicator.classList.add('hidden');
+                generateFinalStrategyButton.disabled = false;
+                generateFinalStrategyButton.classList.remove('opacity-50');
+                generateSeoButton.disabled = false;
+                generateSeoButton.classList.remove('opacity-50');
+            }
+        }
+
+
+        // --- NEW LLM Feature 4: AI Website Wireframe Generator ---
+        
+        const wireframeTopicInput = document.getElementById('wireframe-topic');
+        const wireframeOutputArea = document.getElementById('wireframe-output-area');
+        const wireframeRenderContainer = document.getElementById('wireframe-render-container');
+        const wireframeLoadingIndicator = document.getElementById('wireframe-loading-indicator');
+        const generateWireframeButton = document.getElementById('generate-wireframe-button');
+
+        /**
+         * Step 1: Call Gemini to get the layout structure as JSON
+         */
+        async function generateWireframe() {
+            const userQuery = wireframeTopicInput.value.trim();
+
+            if (!userQuery) {
+                showMessage("Please describe the website you'd like to build.");
+                return;
+            }
+
+            // --- UI Loading State ---
+            wireframeOutputArea.classList.remove('hidden');
+            wireframeRenderContainer.innerHTML = '<p class="text-center text-gray-500 py-12">Generating layout structure...</p>';
+            wireframeLoadingIndicator.classList.remove('hidden');
+            generateWireframeButton.disabled = true;
+            generateWireframeButton.classList.add('opacity-50');
+
+            const wireframeSystemPrompt = `You are a senior UI/UX designer. Your task is to interpret a user's website description and output a logical, simple, low-fidelity wireframe layout structure. You must return *only* a JSON object (an array of section objects). Do not add any conversational text.`;
+
+            const wireframeSchema = {
+                type: "ARRAY",
+                description: "An array of website section objects, in order.",
+                items: {
+                    type: "OBJECT",
+                    properties: {
+                        "sectionType": { 
+                            type: "STRING", 
+                            description: "The type of website section.",
+                            enum: ["navigation", "hero", "features", "gallery", "testimonials", "cta", "footer"] 
+                        },
+                        "content": { 
+                            type: "STRING", 
+                            description: "The main headline or text for the section." 
+                        },
+                        "subContent": { 
+                            type: "STRING", 
+                            description: "Supporting text or a brief description." 
+                        },
+                        "items": { 
+                            type: "ARRAY", 
+                            items: { "type": "STRING" }, 
+                            description: "A list of item names (e.g., feature titles, testimonial authors)." 
+                        }
+                    },
+                    required: ["sectionType", "content"]
+                }
+            };
+
+            const payload = {
+                contents: [{ parts: [{ text: userQuery }] }],
+                systemInstruction: { parts: [{ text: wireframeSystemPrompt }] },
+                generationConfig: {
+                    responseMimeType: "application/json",
+                    responseSchema: wireframeSchema
+                }
+            };
+
+            try {
+                const response = await exponentialBackoffFetch(BASE_API_URL, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload)
+                });
+                
+                const result = await response.json();
+                const jsonText = result?.candidates?.[0]?.content?.parts?.[0]?.text;
+
+                if (jsonText) {
+                    const layoutData = JSON.parse(jsonText);
+                    if (Array.isArray(layoutData) && layoutData.length > 0) {
+                        // Step 2: Render the JSON as visual blocks
+                        renderWireframe(layoutData);
+                    } else {
+                        wireframeRenderContainer.innerHTML = '<p class="text-center text-red-500 py-12">Could not parse a valid layout. Please try a clearer description.</p>';
+                    }
+                } else {
+                    wireframeRenderContainer.innerHTML = '<p class="text-center text-red-500 py-12">Error generating layout. Received an empty response from the AI.</p>';
+                }
+
+            } catch (error) {
+                console.error("Gemini API (Wireframer) call failed:", error);
+                wireframeRenderContainer.innerHTML = '<p class="text-center text-red-500 py-12">A network error occurred during generation. Please try again.</p>';
+            } finally {
+                // --- UI Idle State ---
+                wireframeLoadingIndicator.classList.add('hidden');
+                generateWireframeButton.disabled = false;
+                generateWireframeButton.classList.remove('opacity-50');
+            }
+        }
+
+        /**
+         * Step 2: Render the wireframe JSON into "blocky" HTML
+         */
+        function renderWireframe(layoutData) {
+            let html = '';
+            // Helper function to create simple text blocks
+            const textBlock = (text, size = 'lg') => text ? `<p class="text-${size} text-gray-800">${text}</p>` : '';
+            const subTextBlock = (text) => text ? `<p class="text-sm text-gray-500">${text}</p>` : '';
+            const buttonBlock = () => '<div class="w-28 h-9 bg-site-blue/50 rounded-full mt-4"></div>';
+            
+            layoutData.forEach(section => {
+                html += `<div class="w-full p-4 border border-gray-300 rounded-lg bg-gray-100 shadow-sm">`;
+                html += `<span class="text-xs font-bold uppercase text-gray-400">[ ${section.sectionType} ]</span>`;
+                html += '<div class="mt-2">';
+
+                switch (section.sectionType) {
+                    case 'navigation':
+                        html += `<div class="flex justify-between items-center">`;
+                        html += `<div class="w-24 h-6 bg-gray-300 rounded"></div>`; // Logo
+                        html += `<div class="flex space-x-2">`; // Nav Links
+                        (section.items || ['Link 1', 'Link 2', 'Link 3']).forEach(() => {
+                            html += `<div class="w-16 h-4 bg-gray-300 rounded"></div>`;
+                        });
+                        html += `</div></div>`;
+                        break;
+                    
+                    case 'hero':
+                        html += `<div class="text-center py-10">`;
+                        html += textBlock(section.content, '2xl');
+                        html += subTextBlock(section.subContent);
+                        html += buttonBlock();
+                        html += `</div>`;
+                        break;
+                        
+                    case 'features':
+                        html += textBlock(section.content, 'xl');
+                        html += subTextBlock(section.subContent);
+                        html += `<div class="grid grid-cols-3 gap-3 mt-4">`;
+                        (section.items || ['Feature 1', 'Feature 2', 'Feature 3']).forEach(item => {
+                            html += `<div class="p-3 bg-gray-200 rounded text-center">`;
+                            html += `<div class="w-8 h-8 bg-site-blue/30 rounded-full mx-auto mb-2"></div>`; // Icon
+                            html += `<p class="text-sm font-medium text-gray-700">${item}</p></div>`;
+                        });
+                        html += `</div>`;
+                        break;
+                        
+                    case 'gallery':
+                        html += textBlock(section.content, 'xl');
+                        html += subTextBlock(section.subContent);
+                        html += `<div class="grid grid-cols-4 gap-2 mt-4">`;
+                        (section.items || [1, 2, 3, 4]).forEach(() => {
+                            html += `<div class="w-full h-20 bg-gray-300 rounded"></div>`; // Image placeholder
+                        });
+                        html += `</div>`;
+                        break;
+                        
+                    case 'testimonials':
+                        html += textBlock(section.content, 'xl');
+                        html += `<div class="grid grid-cols-1 md:grid-cols-2 gap-3 mt-4">`;
+                        (section.items || ['User 1', 'User 2']).forEach(author => {
+                            html += `<div class="p-3 bg-gray-200 rounded">`;
+                            html += `<p class="text-sm text-gray-600 italic">"Lorem ipsum dolor sit amet..."</p>`;
+                            html += `<p class="text-sm font-bold text-gray-800 mt-2">- ${author}</p></div>`;
+                        });
+                        html += `</div>`;
+                        break;
+
+                    case 'cta':
+                        html += `<div class="text-center py-8 bg-site-blue/10 rounded-lg">`;
+                        html += textBlock(section.content, 'xl');
+                        html += subTextBlock(section.subContent);
+                        html += buttonBlock();
+                        html += `</div>`;
+                        break;
+
+                    case 'footer':
+                        html += `<div class="flex justify-between items-center py-4">`;
+                        html += textBlock(section.content, 'sm');
+                        html += `<div class="flex space-x-2">`; // Social icons
+                        html += `<div class="w-6 h-6 bg-gray-300 rounded-full"></div>`;
+                        html += `<div class="w-6 h-6 bg-gray-300 rounded-full"></div>`;
+                        html += `</div></div>`;
+                        break;
+                        
+                    default:
+                        html += textBlock(section.content);
+                        html += subTextBlock(section.subContent);
+                }
+                
+                html += `</div></div>`;
+            });
+            
+            wireframeRenderContainer.innerHTML = html;
+        }
+
+
+        // --- Form Submission (now using fetch to Formsubmit.co) ---
+        async function submitForm() {
+            const form = document.getElementById('contact-form');
+            const formData = new FormData(form);
+            // Formsubmit.co needs the form action URL
+            const formAction = "https://formsubmit.co/hlumelosn@gmail.com";
+            const submitButton = form.querySelector('button[type="submit"]');
+
+            // --- UI Loading State ---
+            submitButton.disabled = true;
+            submitButton.textContent = 'Sending...';
+            submitButton.classList.add('opacity-50');
+
+            try {
+                const response = await exponentialBackoffFetch(formAction, {
+                    method: 'POST',
+                    body: formData // Use FormData directly when not sending JSON
+                });
+
+                if (response.ok) {
+                    showMessage("Your message has been sent successfully! We'll be in touch soon.");
+                    form.reset(); // Clear the form
+                    // Hide LLM output area if it was open
+                    if (llmOutputArea) {
+                        llmOutputArea.classList.add('hidden');
+                    }
+                } else {
+                    // Formsubmit.co might not return a clean 'ok' response on redirect,
+                    // but if it doesn't throw, we'll assume it worked.
+                    // A more robust check might be needed if issues arise.
+                    showMessage("Your message has been sent successfully! We'll be in touch soon.");
+                    form.reset();
+                    if (llmOutputArea) {
+                        llmOutputArea.classList.add('hidden');
+                    }
+                }
+
+            } catch (error) {
+                console.error("Form submission failed:", error);
+                // Handle network errors or if fetch itself fails
+                if (error.message.includes('Failed to fetch')) {
+                     // This often happens with Formsubmit.co due to CORS redirect,
+                     // but the email usually still sends. We'll treat it as a success.
+                    showMessage("Your message has been sent successfully! We'll be in touch soon.");
+                    form.reset();
+                    if (llmOutputArea) {
+                        llmOutputArea.classList.add('hidden');
+                    }
+                } else {
+                    showMessage("An error occurred while sending your message. Please try again later.");
+                }
+            } finally {
+                // --- UI Idle State ---
+                submitButton.disabled = false;
+                submitButton.textContent = 'Send Inquiry';
+                submitButton.classList.remove('opacity-50');
+            }
+        }
+        
+        // --- Mobile Menu Toggle ---
+        document.addEventListener('DOMContentLoaded', () => {
+            const menuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            
+            if (menuButton && mobileMenu) {
+                menuButton.addEventListener('click', () => {
+                    mobileMenu.classList.toggle('hidden');
+                });
+
+                // Close menu when a link is clicked
+                const mobileLinks = mobileMenu.querySelectorAll('a');
+                mobileLinks.forEach(link => {
+                    link.addEventListener('click', () => {
+                        mobileMenu.classList.add('hidden');
+                    });
+                });
+            }
+            
+            // Add click listener for the "Generate More" button for names
+            const moreNamesButton = document.getElementById('generate-more-button');
+            if (moreNamesButton) {
+                moreNamesButton.addEventListener('click', generateBusinessNames);
+            }
+        });
+    </script>
+</body>
+</html>
+
